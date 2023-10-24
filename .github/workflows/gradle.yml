@@ -32,5 +32,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          path: "proxy/build/libs/velocity-proxy-*-all.jar.jar"
+          path: "proxy/build/libs/velocity-proxy-*-all.jar"
           if-no-files-found: error
