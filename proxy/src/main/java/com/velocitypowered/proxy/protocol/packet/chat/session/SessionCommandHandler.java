@@ -67,10 +67,10 @@ public class SessionCommandHandler implements CommandHandler<SessionPlayerComman
           return CompletableFuture.completedFuture(packet);
         } else {
           if (packet.isSigned()) {
-            logger.fatal("A plugin tried to change a command with signed component(s). "
+            /*logger.fatal("A plugin tried to change a command with signed component(s). "
                 + "This is not supported. "
                 + "Disconnecting player " + player.getUsername() + ". Command packet: " + packet);
-            /*player.disconnect(Component.text(
+            player.disconnect(Component.text(
                 "A proxy plugin caused an illegal protocol state. "
                     + "Contact your network administrator."));*/
             return CompletableFuture.completedFuture(null);
@@ -91,10 +91,10 @@ public class SessionCommandHandler implements CommandHandler<SessionPlayerComman
             return packet;
           } else {
             if (packet.isSigned()) {
-              logger.fatal("A plugin tried to change a command with signed component(s). "
+              /*logger.fatal("A plugin tried to change a command with signed component(s). "
                   + "This is not supported. "
                   + "Disconnecting player " + player.getUsername() + ". Command packet: " + packet);
-              /*player.disconnect(Component.text(
+              player.disconnect(Component.text(
                   "A proxy plugin caused an illegal protocol state. "
                       + "Contact your network administrator."));*/
               return null;
